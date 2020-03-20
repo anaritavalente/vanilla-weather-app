@@ -1,17 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>Vanilla Weathr App</title>
-</head>
-<body>
-<script> src="src/app.js"</script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
     <div class="container">
-        <h1>Hello Vanilla!</h1>
-        <a href="" class="btn btn-primary">Click Me</a>
-    </div>
-</body>
+      <div class="row">
+          <div class="col-3">
+              <button type="button" class="buttoncity" id="current-position"> My Location</button>
+              <button type="button" class="buttoncity"> Braga </button>  
+              <button type="button" class="buttoncity"> Porto </button>  
+          </div>
+          <div class="col-9"> 
+            <form>
+                <input type="text" placeholder="  Search city" class="searchcity" id="enter-city"/>
+                <input type="submit"  value="Search"/> 
+            </form>
+          </div>
+      </div>
+
+      <div class="cityandday">
+          <p id="city">
+              Braga
+          </p>
+          </br>
+          <p id="dayandhour">
+              Today, 27th January 
+          </p>
+      </div>
+
+      <div class="todayweather">
+          <i class="fas fa-cloud"></i> 
+          <p id="temp"> 
+          12 
+          </p>
+          <button type="button" id="cel"> ºC  </button> 
+          <p class="division" > I </p>
+          <button type="button" id="fah"> F </button> 
+          <p   class="precipitation"> Precipitation: 90%</p>
+          <p   class="wind"> Wind: 10km/h</p>
+      </div>
+
+      <div class="row">
+          <div class="day2">
+              <p class="day">Tue</p>
+              <i class="fas fa-cloud"></i>
+              <p class="nextdaystemp"> 12º C I 4º C</p>
+          </div>
+      
+          <div class="day3">
+              <p class="day">Wed</p>
+              <i class="fas fa-cloud-showers-heavy"></i>
+              <p class="nextdaystemp"> 12º C I 4º C </p>
+          </div>
+
+          <div class="day4">
+              <p class="day">Thu</p>
+              <i class="fas fa-cloud-sun"></i>
+              <p class="nextdaystemp"> 12º C I 4º C </p>
+          </div>
+
+          <div class="day5">
+              <p class="day">Fri</p>
+              <i class="fas fa-cloud-sun"></i>
+              <p class="nextdaystemp"> 12º C I 4º C </p>
+          </div>
+
+          <div class="day6">
+              <p class="day">Sat</p>
+              <i class="fas fa-cloud-sun"></i>
+              <p class="nextdaystemp"> 12º C I 4º C </p>
+          </div>
+
+          <div class="day7">
+              <p class="day">Sun</p>
+              <i class="fas fa-cloud-sun"></i>
+              <p class="nextdaystemp"> 12º C I 4º C </p>
+          </div>
+      </div> 
+    </div> 
+  </body>
 </html>
+
+
+
+
+
