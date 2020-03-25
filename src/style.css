@@ -154,13 +154,39 @@ p.nextdaystemp{
 }
 
 .col-4 i {
-  font-size: 35px;
+  font-size: 30px;
   color: #7FBBB3;
 }
 
-.col-4 .row {
-margin-top: 23px;
-}
+#first-icon {
+ position: relative;
+ top: 20px;
+} 
+
+#second-icon {
+  position: relative;
+  top: 60px;
+} 
+
+#third-icon {
+  position: relative;
+  top: 100px;
+} 
+
+#fourth-icon {
+  position: relative;
+  top: 140px;
+} 
+
+#fifth-icon {
+  position: relative;
+  top: 180px;
+} 
+
+#sixth-icon {
+  position: relative;
+  top: 220px;
+} 
 
 .finalnote {
   margin: 7px 255px;
