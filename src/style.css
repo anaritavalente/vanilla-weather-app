@@ -71,11 +71,12 @@
   margin-top: 75px;
 }
 
-#city, #hour {
+#city, #hour, .fa-map-marker-alt {
   display: inline;
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
+  margin-right: 8px;
 }
 
 #day {
@@ -110,16 +111,25 @@
   font-size: 55px;
 }
 
+#metric-symbol {
+ font-size: 55px;
+}
+
+#description {
+  display: inline;
+  margin-left: 15px;
+  text-transform: capitalize;
+}
+
 #button-cel,
 #button-fah {
   position: relative;
-  left: 190px;
-  bottom:5px;
-  width: 35px;
+  left: 105px;
+  width: 25px;
   background-color:#4f6570;
   border: transparent;
   color: white;
-  font-size: 22px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -132,15 +142,16 @@
   height: 62px;
   padding: 15px 0;
   margin: 0 15px;
+  font-size: 20px;
+  text-align: center;
 }
 
 .square3 {
   margin-top: 25px;
 }
 
-.precipitation, .wind {
-  font-size: 20px;
-  text-align: center;
+.fa-tint, .fa-wind {
+  margin-right: 5px;
 }
 
 p.day {

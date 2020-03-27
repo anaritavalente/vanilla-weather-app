@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3ca1a59d6a.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
+<script src="src/app.js"></script>
     <div class="row body">
         <div class="col-7">
             <div class="today-block"> 
@@ -29,9 +31,8 @@
                 </div>
         
                 <div class="city_hour_day">
-                    <p id="city">
-                        <i class="fas fa-map-marker-alt"></i> Braga 
-                    </p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p id="city">Braga</p> 
                     <p id="hour">12:08</p>
                     <p id="day">
                         Monday, 27th January    
@@ -42,22 +43,21 @@
                     <div class="col-7" id="square1"> 
                         <i class="fas fa-cloud"></i> 
                         <p id="temp">
-                            12 ºC
+                            12  
                         </p>
+                        <span id="metric-symbol">ºC</span>
+                        <br>
+                        <p id="description"></p>
                         <button type="button" id="button-cel">ºC</button>
                         <button type="button" id="button-fah">F</button> 
                     </div>
             
                     <div class="col-5"> 
                         <div class="square2">
-                            <p class="precipitation"> 
-                                <i class="fas fa-tint"></i> 90%
-                            </p>
+                            <i class="fas fa-tint"></i> <span id="humidity"></span>% 
                         </div>
                         <div class="square3">
-                            <p class="wind">
-                                <i class="fas fa-wind"></i> 10km/h
-                            </p> 
+                            <i class="fas fa-wind"></i><span id="wind"></span>km/h 
                         </div>
                     </div>
                 </div>
@@ -67,18 +67,18 @@
             <div class="row nextdays-block">
                 <h1 class="h1-nextdaysweather">Next days</h1>
                     <div class="col-8">
-                            <p class="day">Tue</p>
-                            <p class="nextdaystemp"> 12º C - 4º C</p>
-                            <p class="day">Wed</p>
-                            <p class="nextdaystemp"> 12º C - 4º C </p>
-                            <p class="day">Thu</p>
-                            <p class="nextdaystemp"> 12º C - 4º C </p>
-                            <p class="day">Fri</p>
-                            <p class="nextdaystemp"> 12º C - 4º C </p>
-                            <p class="day">Sat</p>
-                            <p class="nextdaystemp"> 12º C - 4º C </p>
-                            <p class="day">Sun</p>
-                            <p class="nextdaystemp"> 12º C - 4º C </p>
+                        <p class="day">Tue</p>
+                        <p class="nextdaystemp"> 12º C - 4º C</p>
+                        <p class="day">Wed</p>
+                        <p class="nextdaystemp"> 12º C - 4º C </p>
+                        <p class="day">Thu</p>
+                        <p class="nextdaystemp"> 12º C - 4º C </p>
+                        <p class="day">Fri</p>
+                        <p class="nextdaystemp"> 12º C - 4º C </p>
+                        <p class="day">Sat</p>
+                        <p class="nextdaystemp"> 12º C - 4º C </p>
+                        <p class="day">Sun</p>
+                        <p class="nextdaystemp"> 12º C - 4º C </p>
                     </div>
                     <div class="col-4">
                         <div class="row" id="first-icon"> <i class="fas fa-cloud"></i> </div>
