@@ -1,11 +1,11 @@
-.body {
+body {
   font-family: 'Noto Sans', sans-serif;
   color: #37474f;
   margin-top: 25px;
 }
 
 .today-block, .col-5 .nextdays-block {
-  height: 540px;
+  height: 560px;
   border: 4px solid ;
   border-radius: 2px;
   border-color: #7FBBB3;
@@ -14,7 +14,7 @@
 .today-block { 
   width: 540px;
   margin: 10px 0 0 255px;
-  padding: 30px 35px;
+  padding: 30px 40px;
 }
 
 .col-5 .nextdays-block {
@@ -84,10 +84,6 @@
   margin-top: 8px;
 }
 
-.todayweather {
-  margin-top: 45px;
-}
-
 #square1, .square2, .square3 {
   background-color:#4f6570;
   border-radius: 4px;
@@ -116,25 +112,28 @@
 }
 
 #description {
-  display: inline;
   margin-left: 15px;
   text-transform: capitalize;
 }
 
+.units {
+  margin-top: 25px;
+}
+
 #button-cel,
 #button-fah {
-  position: relative;
-  left: 105px;
-  width: 25px;
-  background-color:#4f6570;
+  width: 30px;
+  background-color: transparent;
   border: transparent;
-  color: white;
-  font-size: 20px;
+  border-radius: 1.5px;
+  color: #37474f;
+  font-size: 16px;
   text-align: center;
 }
 
 #button-cel:hover, #button-fah:hover {
-  color:  #37474f;
+  background-color: #4f6570;
+  color:white;
 }
 
 .square2, .square3 {
@@ -199,6 +198,7 @@ p.nextdaystemp{
   top: 220px;
 } 
 
-.finalnote {
-  margin: 7px 255px;
+p.finalnote {
+  margin: 15px 0 0 255px;
+  font-size: 15px;
   }
