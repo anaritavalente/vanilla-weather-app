@@ -85,7 +85,7 @@ body {
 }
 
 #square1, .square2, .square3 {
-  background-color:#4f6570;
+  background-color:rgb(119, 168, 162);
   border-radius: 4px;
   color: white;
 }
@@ -97,18 +97,15 @@ body {
   height: 150px;
 }
 
-.todayweather .fa-cloud {
-  font-size: 80px;
-  margin: 15px 10px;
+.todayweather .icon {
+  margin-left: 10px;
 }
 
-#temp {
+#temp, #metric-symbol {
   display: inline;
-  font-size: 55px;
-}
-
-#metric-symbol {
- font-size: 55px;
+  position: relative;
+  top: 20px;
+  font-size: 60px;
 }
 
 #description {
@@ -198,7 +195,6 @@ p.nextdaystemp{
   top: 220px;
 } 
 
-p.finalnote {
-  margin: 15px 0 0 255px;
-  font-size: 15px;
-  }
+small{
+  margin: 5px 270px;
+}

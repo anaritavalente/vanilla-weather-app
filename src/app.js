@@ -39,6 +39,10 @@ function displayTemperature(response) {
 
     let windElement = document.querySelector("#wind");
     windElement.innerHTML = Math.round(response.data.wind.speed);
+
+    let iconElement = document.querySelector("#icon");
+    iconElement.setAttribute('src',`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    iconElement.setAttribute('alt',`${response.data.weather[0].description}`);
 }
 
 let apikey= `fab5f60356d4f31a390522bd136e2a65`;
