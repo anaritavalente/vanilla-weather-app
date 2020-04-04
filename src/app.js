@@ -76,3 +76,19 @@ function handleSubmit(event) {
 
 let formElement = document.querySelector("form");
 formElement.addEventListener("submit", handleSubmit);
+
+//when user clicks "My location"
+function getMyLocation(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let key = "fab5f60356d4f31a390522bd136e2a65";
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${key}`;
+    axios.get(url).then(displayData);
+}
+  
+function getPosition() {
+    navigator.geolocation.getCurrentPosition(getMyLocation);
+}
+  
+let currentLocationElement = document.querySelector("#current-position");
+currentLocationElement.addEventListener("click", getPosition);
