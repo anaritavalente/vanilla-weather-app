@@ -101,7 +101,7 @@ body {
   margin-left: 10px;
 }
 
-#temp, #metric-symbol {
+#temp {
   display: inline;
   position: relative;
   top: 20px;

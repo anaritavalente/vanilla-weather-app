@@ -22,8 +22,9 @@ let dayElement = document.querySelector("#day");
 dayElement.innerHTML = `${week[weekday_number-1]}, ${now.getDate()} ${months[month_number]} ${now.getFullYear()}`;
 
 function displayData(response) {
+    celsiusTemperature = Math.round(response.data.main.temp);
     let temperatureElement = document.querySelector("#temp");
-    temperatureElement.innerHTML = Math.round(response.data.main.temp);
+    temperatureElement.innerHTML = `${Math.round(response.data.main.temp)} ºC`;
 
     let cityElement = document.querySelector("#city");
     cityElement.innerHTML = response.data.name;
@@ -92,3 +93,24 @@ function getPosition() {
   
 let currentLocationElement = document.querySelector("#current-position");
 currentLocationElement.addEventListener("click", getPosition);
+
+
+//when user intends to change the temprature units
+function convertToFahrenheit() {
+    let temperatureElement = document.querySelector("#temp");
+    fahrenheitTemp = (celsiusTemperature *9 )/5 + 32;
+    temperatureElement.innerHTML = `${Math.round(fahrenheitTemp)} F`;
+}
+
+function convertToCelsius() {
+    let  temperatureElement = document.querySelector("#temp");
+    temperatureElement.innerHTML = `${celsiusTemperature} ºC`;
+}
+
+let celsiusTemperature = null;
+
+let celsiusButtonElement = document.querySelector("#button-cel");
+celsiusButtonElement.addEventListener("click",convertToCelsius);
+
+let fahrenheitButtonElement = document.querySelector("#button-fah");
+fahrenheitButtonElement.addEventListener("click",convertToFahrenheit);
