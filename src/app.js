@@ -63,22 +63,19 @@ function displayData(response) {
     hourElement.innerHTML = `${hours}:${minutes}`;
 }
 
-function search(city) {
+function search() {
+    event.preventDefault();
+    let inputElement = document.querySelector("#city-input");
+    let city = inputElement.value;
     let apikey= `fab5f60356d4f31a390522bd136e2a65`;
     let apiURL= `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`;
     axios.get(apiURL).then(displayData);
 }
 
-function handleSubmit(event) {
-    event.preventDefault();
-    let inputElement = document.querySelector("#city-input");
-    search(inputElement.value);
-}
-
 let formElement = document.querySelector("form");
-formElement.addEventListener("submit", handleSubmit);
+formElement.addEventListener("submit", search);
 
-//when user clicks "My location"
+//when user clicks "Current location"
 function getMyLocation(position) {
     let lat = position.coords.latitude;
     let lon = position.coords.longitude;
@@ -90,7 +87,8 @@ function getMyLocation(position) {
 function getPosition() {
     navigator.geolocation.getCurrentPosition(getMyLocation);
 }
-  
+
+getPosition();
 let currentLocationElement = document.querySelector("#current-position");
 currentLocationElement.addEventListener("click", getPosition);
 
