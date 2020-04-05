@@ -65,6 +65,8 @@ function displayData(response) {
 
 function search() {
     event.preventDefault();
+    fahrenheitLink.classList.remove("active");
+    celsiusLink.classList.add("active");
     let inputElement = document.querySelector("#city-input");
     let city = inputElement.value;
     let apikey= `fab5f60356d4f31a390522bd136e2a65`;
@@ -96,10 +98,10 @@ currentLocationElement.addEventListener("click", getPosition);
 //when user intends to change the temperature units
 function convertToFahrenheit() {
     let temperatureElement = document.querySelector("#temp");
-    celsiusLink.classList.remove("active");
-    fahrenheitLink.classList.add("active");
     fahrenheitTemp = (celsiusTemperature *9 )/5 + 32;
     temperatureElement.innerHTML = `${Math.round(fahrenheitTemp)} F`;
+    celsiusLink.classList.remove("active");
+    fahrenheitLink.classList.add("active");
 }
 
 function convertToCelsius() {
