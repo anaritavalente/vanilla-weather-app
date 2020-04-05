@@ -117,20 +117,13 @@ body {
   margin-top: 25px;
 }
 
-#button-cel,
-#button-fah {
-  width: 30px;
-  background-color: transparent;
-  border: transparent;
-  border-radius: 1.5px;
-  color: #37474f;
-  font-size: 16px;
-  text-align: center;
+.units .active {
+  color: #37474f; 
+  cursor: default;
 }
 
-#button-cel:hover, #button-fah:hover {
-  background-color: #4f6570;
-  color:white;
+.units .active:hover {
+  text-decoration: none;
 }
 
 .square2, .square3 {

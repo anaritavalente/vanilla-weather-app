@@ -95,9 +95,11 @@ let currentLocationElement = document.querySelector("#current-position");
 currentLocationElement.addEventListener("click", getPosition);
 
 
-//when user intends to change the temprature units
+//when user intends to change the temperature units
 function convertToFahrenheit() {
     let temperatureElement = document.querySelector("#temp");
+    celsiusLink.classList.remove("active");
+    fahrenheitLink.classList.add("active");
     fahrenheitTemp = (celsiusTemperature *9 )/5 + 32;
     temperatureElement.innerHTML = `${Math.round(fahrenheitTemp)} F`;
 }
@@ -105,12 +107,14 @@ function convertToFahrenheit() {
 function convertToCelsius() {
     let  temperatureElement = document.querySelector("#temp");
     temperatureElement.innerHTML = `${celsiusTemperature} ºC`;
+    fahrenheitLink.classList.remove("active");
+    celsiusLink.classList.add("active");
 }
 
 let celsiusTemperature = null;
 
-let celsiusButtonElement = document.querySelector("#button-cel");
-celsiusButtonElement.addEventListener("click",convertToCelsius);
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click",convertToCelsius);
 
-let fahrenheitButtonElement = document.querySelector("#button-fah");
-fahrenheitButtonElement.addEventListener("click",convertToFahrenheit);
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click",convertToFahrenheit);
