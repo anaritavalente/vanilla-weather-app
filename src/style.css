@@ -23,14 +23,15 @@ body {
   padding: 30px 20px;
 }
 
-.h1-todayweather, .h1-nextdaysweather{
+.h1-todayweather, .h1-nextdaysweather {
   font-size: 25px;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.h1-nextdaysweather{
+.h1-nextdaysweather {
   margin-left: 12px;
+  margin-bottom: 35px;
 }
 
 .today-block .row {
@@ -143,13 +144,13 @@ body {
   margin-right: 5px;
 }
 
-p.day {
+#day1, #day2, #day3, #day4, #day5, #day6 {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 0;
 }
 
-p.nextdaystemp{
+p.nextdaystemp {
   margin-bottom: 20px;
 }
 
@@ -188,6 +189,6 @@ p.nextdaystemp{
   top: 220px;
 } 
 
-small{
+small {
   margin: 5px 270px;
 }
