@@ -23,7 +23,7 @@
                 </div>
                 <div class="col-7"> 
                     <form>
-                            <input type="text" placeholder="Enter city here" class="entercity" id="city-input"/>
+                        <input type="text" placeholder="Enter city here" class="entercity" autocomplete="off" id="city-input"/>
                         <input type="submit"  value="Search" class="buttonsearch"/> 
                     </form>
                 </div>
@@ -36,20 +36,16 @@
                 <p id="day">Monday, 27th January</p>
             </div>
         
-            <div class="row todayweather">
-                <div class="col-7" id="square1"> 
+            <div class="row" id="square1">
+                <div class="col-8"> 
                     <img id = "icon">
                     <p id="temp">12 ºC</p> 
                     <p id="description"></p>
                 </div>
-        
-                <div class="col-5"> 
-                    <div class="square2">
-                        <i class="fas fa-tint"></i> <span id="humidity"></span>% 
-                    </div>
-                    <div class="square3">
-                        <i class="fas fa-wind"></i><span id="wind"></span>km/h 
-                    </div>
+                <div class="col-4"> 
+                    <i class="fas fa-tint"></i><span id="humidity"></span>%
+                    <br>
+                    <i class="fas fa-wind"></i><span id="wind"></span>km/h
                 </div>
             </div>
             <div class="units">
@@ -60,27 +56,32 @@
     <div class="col-5">
         <div class="row nextdays-block">
             <h1 class="h1-nextdaysweather">Next days</h1>
-                <div class="col-8">
-                    <p id="day1">Tue</p>
-                    <p class="nextdaystemp"> 12º C | 4º C</p>
-                    <p id="day2">Wed</p>
-                    <p class="nextdaystemp"> 12º C | 4º C </p>
-                    <p id="day3">Thu</p>
-                    <p class="nextdaystemp"> 12º C | 4º C </p>
-                    <p id="day4">Fri</p>
-                    <p class="nextdaystemp"> 12º C | 4º C </p>
-                    <p id="day5">Sat</p>
-                    <p class="nextdaystemp"> 12º C | 4º C </p>
-                    <p id="day6">Sun</p>
-                    <p class="nextdaystemp"> 12º C | 4º C </p>
-                </div>
-            <div class="col-4">
-                <div class="row" id="first-icon"> <i class="fas fa-cloud"></i> </div>
-                <div class="row" id="second-icon"> <i class="fas fa-cloud-showers-heavy"></i></div>
-                <div class="row" id="third-icon"> <i class="fas fa-cloud-sun"></i> </div>
-                <div class="row" id="fourth-icon"> <i class="fas fa-cloud-sun"></i></div>
-                <div class="row" id="fifth-icon"> <i class="fas fa-cloud-sun"></i></div>
-                <div class="row" id="sixth-icon"> <i class="fas fa-cloud-sun"></i></div>
+            <div class="col-7">
+                <p id="day1">Tue</p> 
+                <p class="forecast"> <span id = "max1"> 12º C </span> <span>|</span> <span id="min1">4º C</span> </p> 
+                
+                <p id="day2">Tue</p>
+                <p class="forecast"> <span id = "max2"> 12º C </span> <span>|</span> <span id="min2">4º C</span></p>
+            
+                <p id="day3">Tue</p>
+                <p  class="forecast"> <span id = "max3"> 12º C </span> <span>|</span> <span id="min3">4º C</span></p>
+                
+                <p id="day4">Tue</p>
+                <p  class="forecast"> <span id = "max4"> 12º C </span> <span>|</span> <span id="min4">4º C</span></p>
+            
+                <p id="day5">Tue</p>
+                <p  class="forecast"> <span id = "max5"> 12º C </span> <span>|</span> <span id="min5">4º C</span></p>
+            
+                <p id="day6">Tue</p>
+                <p  class="forecast"> <span id = "max6"> 12º C </span> <span>|</span> <span id="min6">4º C</span></p>
+            </div>
+            <div class="col-5">
+                <div class="row-1"> <img id="icon1"> </div>
+                <div class="row-1"> <img id="icon2"> </div>
+                <div class="row-1"> <img id="icon3"> </div>
+                <div class="row-1"> <img id="icon4"> </div>
+                <div class="row-1"> <img id="icon5"> </div>
+                <div class="row-1"> <img id="icon6"> </div>
             </div>
         </div>
     </div>
