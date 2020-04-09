@@ -13,19 +13,18 @@ body {
 
 .today-block { 
   width: 540px;
-  margin: 10px 0 0 255px;
+  margin: 10px 0 0 265px;
   padding: 30px 40px;
 }
 
 .col-5 .nextdays-block {
   width: 250px;
-  margin: 10px 0 0 50px;
+  margin: 10px 0 0 10px;
   padding: 30px 20px;
 }
 
 .h1-todayweather, .h1-nextdaysweather {
-  font-size: 25px;
-  font-weight: bold;
+  font-size: 30px;
   text-transform: uppercase;
 }
 
@@ -45,7 +44,6 @@ body {
   border-radius: 5px;
   padding: 8px 10px;
   color: white;
-  font-weight: bold;  
 }
 
 .buttonsearch {
@@ -68,13 +66,12 @@ body {
 }
 
 .city_hour_day {
-  margin-top: 72px;
+  margin-top: 70px;
 }
 
 #city, #hour, .fa-map-marker-alt {
   display: inline;
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 32px;
   text-transform: uppercase;
   margin-right: 8px;
 }
@@ -125,7 +122,7 @@ body {
 }
 
 .units {
-  margin-top: 15px;
+  margin-top: 10px;
   font-size: 20px;
 }
 
@@ -139,13 +136,12 @@ body {
 }
 
 #day1, #day2, #day3, #day4, #day5, #day6 {
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 17px;
   margin-bottom: 2px;
 }
 
 .forecast {
-  margin-bottom: 23px;
+  margin-bottom: 20px;
   color: #37474f; 
 }
 
@@ -162,6 +158,6 @@ body {
 }
 
 small {
-  margin: 7px 270px;
+  margin: 7px 0 0 280px;
   color: #37474f; 
 }

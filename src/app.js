@@ -1,6 +1,6 @@
 let week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 let months = ["January", "February", "March", "April", "May", "June", "July", "September", "October", "November", "December"];
-let apiKey = "fab5f60356d4f31a390522bd136e2a65";
+let apiKey = "bbfdbb35ce4efcbcbaa0fc30e630ce66";
 let celsiusTemperature = null;
 
 function formatHours(time) {
@@ -75,6 +75,8 @@ function search(city) {
     fahrenheitLink.classList.remove("active");
     celsiusLink.classList.add("active");
     let apiURL= `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    celsiusLink.removeEventListener('click', convertToCelsius);
+    fahrenheitLink.addEventListener("click",convertToFahrenheit);
     axios.get(apiURL).then(displayData);
 }
 
@@ -105,6 +107,18 @@ function convertToFahrenheit() {
     temperatureElement.innerHTML = `${Math.round(fahrenheitTemp)} F`;
     celsiusLink.classList.remove("active");
     fahrenheitLink.classList.add("active");
+    
+    for (let j = 1; j < 7; j ++) {
+        let maxElement = document.querySelector(`#max${j}`);
+        max_celsius = parseInt(maxElement.innerHTML, 10);
+        maxElement.innerHTML = `${Math.round((max_celsius*9 )/5 + 32)} F`;
+        
+        let minElement = document.querySelector(`#min${j}`);
+        min_celsius = parseInt(minElement.innerHTML, 10);
+        minElement.innerHTML = `${Math.round((min_celsius*9 )/5 + 32)} F`;
+    } 
+    fahrenheitLink.removeEventListener('click',convertToFahrenheit); 
+    celsiusLink.addEventListener("click",convertToCelsius); 
 }
 
 function convertToCelsius() {
@@ -112,6 +126,18 @@ function convertToCelsius() {
     temperatureElement.innerHTML = `${celsiusTemperature} ºC`;
     fahrenheitLink.classList.remove("active");
     celsiusLink.classList.add("active");
+
+    for (let j = 1; j < 7; j ++) {
+        let maxElement = document.querySelector(`#max${j}`);
+        max_fah = parseInt(maxElement.innerHTML, 10);
+        maxElement.innerHTML = `${Math.round((max_fah-32)*(5/9))} ºC`;
+
+        let minElement = document.querySelector(`#min${j}`);
+        min_fah = parseInt(minElement.innerHTML,10);
+        minElement.innerHTML = `${Math.round((min_fah-32)*(5/9))} ºC`;
+    }
+    celsiusLink.removeEventListener('click', convertToCelsius);
+    fahrenheitLink.addEventListener("click",convertToFahrenheit);
 }
 
 let celsiusLink = document.querySelector("#celsius");
